@@ -5,7 +5,7 @@ import images from "../assets/image"; // Assuming logo is in images.logo
 const Footer = () => {
   return (
     <footer className="bg-white py-12 sm:py-16 lg:py-20">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12">
         <div className="col-span-1">
           <div className="flex items-center mb-4">
             <Image src={images.logo} alt="Crownlinks Academy Logo" width={150} height={40} />

@@ -50,14 +50,14 @@ const defaultCourses = [
 const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you" }) => {
   return (
     <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-black">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{title}</h2>
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {courses.map((course, index) => (
             <Link
               key={index}
               href={`/courses/${course.slug}`}
-              className="transform transition-transform duration-200 hover:scale-105 hover:shadow-2xl focus:scale-105 focus:shadow-2xl bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
+              className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
             >
               <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden">
                 <Image
@@ -78,13 +78,19 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                   />
                   <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
                 </div>
-                <h3 className="text-lg sm:text-xl font-semibold text-[#242424] mb-2 leading-tight min-h-[40px]">
+                <h3 className="text-{20px} sm:text-sm font-semibold text-[#242424] mb-2 leading-tight min-h-[40px]">
                   {course.title}
                 </h3>
                 <div className="flex items-baseline mt-4">
-                  <span className="text-[#1A6EDC] font-bold text-xl sm:text-2xl mr-2">{course.currentPrice}</span>
+                  <span className="text-gray-900 font-bold text-xl sm:text-2xl mr-2">{course.currentPrice}</span>
                   <span className="text-gray-500 line-through text-sm sm:text-base">{course.originalPrice}</span>
                 </div>
+                  <button
+                    className="mt-6 w-full border border-[#1A6EDC] text-[#1A6EDC] font-semibold py-2 rounded-3xl transition-colors hover:bg-[#1A6EDC] hover:text-white"
+                    // onClick={() => handleAddToCart(course)} // Uncomment and implement if you want functionality
+                  >
+                  Add to cart
+                  </button>
               </div>
             </Link>
           ))}

@@ -9,6 +9,7 @@ import FAQSection from './components/home/FAQSection';
 import CtaSection from './components/home/CtaSection';
 import Footer from './components/Footer';
 import ImpactStatsSection from './components/home/ImpactStatsSection';
+import Education from './components/home/Education';
 
 export default function Home() {
   return (
@@ -17,10 +18,12 @@ export default function Home() {
       <Hero/>
       <ImpactStatsSection />
       <AboutSection/>
+      <FeaturedCoursesSection/>
+      <AboutSection/>
+      <FeaturedCoursesSection/>
+      <Education />
       <ImageBanner/>
       <WhyChooseUs />
-      <CoursesSection />
-      <FeaturedCoursesSection/>
       <FAQSection />
       <CtaSection />
       <Footer />

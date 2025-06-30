@@ -5,7 +5,7 @@ import Link from 'next/link';
 const CtaSection = () => {
   return (
     <section className="bg-gray-50 py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 text-center">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#242424] mb-6 leading-tight">
           Elevate Your Future with <br className="hidden md:block" />Crownlinks Academy
         </h2>

@@ -7,7 +7,7 @@ import { coursesData } from '../../data/coursesData';
 const CoursesSection = () => {
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#242424] mb-6">
           Expand Your Career Opportunity With <br className="hidden md:block" />Our Courses
         </h2>
@@ -32,13 +32,19 @@ const CoursesSection = () => {
                 />
               </div>
               <div className="p-6 text-left flex flex-col flex-grow">
-                <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#242424] mb-2 uppercase tracking-wide">
-                  {course.title}
-                </h3>
-                <p className="text-gray-700 text-base sm:text-lg leading-relaxed flex-grow">
-                  {course.description}
-                </p>
-              </div>
+  <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#242424] mb-2 uppercase tracking-wide">
+    {course.title}
+  </h3>
+  <p className="text-gray-700 text-base sm:text-lg leading-relaxed flex-grow">
+    {course.description}
+  </p>
+  <button
+    className="mt-6 w-full border border-[#1A6EDC] text-[#1A6EDC] font-semibold py-2 rounded-lg transition-colors hover:bg-[#1A6EDC] hover:text-white"
+    // onClick={() => handleAddToCart(course)} // Uncomment and implement if you want functionality
+  >
+    Add to cart
+  </button>
+</div>
             </Link>
           ))}
         </div>

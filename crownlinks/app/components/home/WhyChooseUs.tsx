@@ -22,7 +22,7 @@ const features = [
 const WhyChooseUs = () => {
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto text-center">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 text-center">
         <h2 className="text-4xl sm:text-5xl font-bold text-[#242424] mb-6">
           Why choose Crownlinks Academy.
         </h2>
