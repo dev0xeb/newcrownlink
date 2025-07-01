@@ -2,7 +2,7 @@ import Image from 'next/image';
 import images from '../../assets/image';
 
 const AboutImage = () => (
-    <section className="bg-white py-16 sm:py-24">
+    <section className="bg-white py-16 sm:py-24 px-6 sm:px-8 lg:px-20">
     <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <Image
         src={images.home_banner} 

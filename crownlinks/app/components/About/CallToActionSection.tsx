@@ -2,7 +2,7 @@
 import Link from 'next/link';
 
 const CallToActionSection = () => (
-  <section className="bg-white py-16 text-center px-4">
+  <section className="bg-white py-16 text-center px-6 sm:px-8 lg:px-20">
     <h2 className="text-2xl sm:text-3xl font-bold mb-4">Elevate Your Future with Crownlinks Academy</h2>
     <p className="text-gray-700 mb-8">
       Join millions of learners worldwide. Our platform equips you with the skills and resources to pursue your passions and reach your goals.

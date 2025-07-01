@@ -78,12 +78,12 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                   />
                   <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
                 </div>
-                <h3 className="text-{20px} sm:text-sm font-semibold text-[#242424] mb-2 leading-tight min-h-[40px]">
+                <h3 className="text-[20px] sm:text-sm font-semibold text-[#242424] mb-2 leading-tight min-h-[84px] max-h-[84px] overflow-hidden text-ellipsis line-clamp-3">
                   {course.title}
                 </h3>
                 <div className="flex items-baseline mt-4">
-                  <span className="text-gray-900 font-bold text-xl sm:text-2xl mr-2">{course.currentPrice}</span>
-                  <span className="text-gray-500 line-through text-sm sm:text-base">{course.originalPrice}</span>
+                  <span className="text-gray-900 font-bold text-[27px] sm:text-2xl mr-2">{course.currentPrice}</span>
+                  <span className="text-gray-500 line-through text-[22px] sm:text-base">{course.originalPrice}</span>
                 </div>
                   <button
                     className="mt-6 w-full border border-[#1A6EDC] text-[#1A6EDC] font-semibold py-2 rounded-3xl transition-colors hover:bg-[#1A6EDC] hover:text-white"

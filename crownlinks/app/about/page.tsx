@@ -7,6 +7,7 @@ import AboutCTA from "../components/About/CallToActionSection";
 import TestimonialsSection from "../components/About/Testimonials";
 import WhyChooseUs from "../components/About/WhyChooseUsSection";
 import Footer from "../components/Footer";
+import ImageBanner from "../components/home/ImageBanner";
 import Navbar from "../components/Navbar";
 
 export default function AboutPage() {
@@ -15,7 +16,7 @@ export default function AboutPage() {
             <Navbar/>            
             <AboutHero />
             <AboutIntro/>
-            <AboutImage />
+            <ImageBanner />
             <AboutMission />
             <AboutStats />
             <WhyChooseUs />
