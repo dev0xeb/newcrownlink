@@ -29,9 +29,9 @@ const TestimonialsSection = () => {
   const handleNext = () => setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="bg-[#f8f9fa] py-16 px-6 sm:px-8 lg:px-20">
-      <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#242424]">
+    <section className="bg-[#f8f9fa] py-10 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#242424]">
           What our learners are saying
         </h2>
         <div className="relative">
@@ -77,7 +77,7 @@ const TestimonialsSection = () => {
 };
 
 const TestimonialCard = ({ name, role, text }: TestimonialCardProps) => (
-  <div className="bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center text-center min-h-[370px]">
+  <div className="bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center text-center min-h-[370px] md:min-h-[320px]">
     <div className="w-20 h-20 rounded-full bg-gray-200 mb-4 overflow-hidden">
       <Image src={images.testimonials_profile} alt={`${name} profile`} />
     </div>
@@ -96,9 +96,9 @@ const TestimonialCard = ({ name, role, text }: TestimonialCardProps) => (
           </svg>
         ))}
     </div>
-    <p className="text-gray-700 mb-6 text-lg">{text}</p>
-    <div className="font-bold text-lg mb-1">{name}</div>
-    <div className="text-gray-500 text-base">{role}</div>
+    <p className="text-gray-700 mb-6 text-base sm:text-lg md:text-xl">{text}</p>
+    <div className="font-bold text-lg md:text-xl mb-1">{name}</div>
+    <div className="text-gray-500 text-base sm:text-lg md:text-xl">{role}</div>
   </div>
 );
 

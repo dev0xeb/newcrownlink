@@ -18,22 +18,22 @@ const features = [
   ];
   
   const WhyChooseUsSection = () => (
-    <section className="bg-white py-16 px-6 sm:px-8 lg:px-20">
-      <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-[40px] md:text-4xl font-bold text-center mb-4">
+    <section className="bg-white py-10 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20">
+      <div className="max-w-screen-xl mx-auto px-2 sm:px-4 md:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-4">
           Why choose Crownlinks Academy.
         </h2>
-        <p className="text-[20px] text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center mb-12 max-w-2xl mx-auto">
           Crownlinks Academy offers flexible, expert-led courses designed to build real-world skills. Whether you're starting out or upskilling, we make learning easy and impactful—anytime, anywhere.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 md:gap-12 gap-8">
           {features.map((feature, idx) => (
             <div
               key={idx}
               className="bg-gray-50 rounded-2xl min-h-[260px] flex flex-col justify-end p-8 shadow-sm"
             >
-              <h3 className="font-bold text-lg mb-2">{feature.title}</h3>
-              <p className="text-gray-600 text-base">{feature.description}</p>
+              <h3 className="font-bold text-lg md:text-xl mb-2">{feature.title}</h3>
+              <p className="text-gray-600 text-base md:text-lg">{feature.description}</p>
             </div>
           ))}
         </div>

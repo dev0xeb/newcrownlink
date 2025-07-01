@@ -147,6 +147,45 @@ const extraCourseData = [
       }
     ]
   },
+  {
+    slug: "fire safety awareness",
+    instructor: 'ADE INAOLAJI',
+    category: 'FIRE SAFETY AWARENESS',
+    students: 1,
+    lastUpdated: 'February 27, 2025',
+    overview: 'This course covers the Fire Safety Awareness. It is suitable for care staff responsible for handling medication.',
+    whoFor: [
+      'Care staff',
+      'Support workers',
+      'Anyone handling medication'
+    ],
+    whatLearn: 'Understanding Fire, Fire Hazards and Prevention, Fire Safety Legislation, Fire Detection and Alarm Systems, Fire Extinguishers, Emergency Procedures, Effects of Fires',
+    requirements: 'Participants is required to be at least 16 years of age, Participants should have basic literacy and numeracy skill, Participants should have Interest in dementia care, Participants should have basic IT skills (for online courses)',
+    card: {
+      duration: '3 MONTHS',
+      lessons: 8,
+      enrolled: 60,
+      access: 'LIFETIME',
+      price: '£500',
+      oldPrice: '£700'
+    },
+    otherCourses: [
+      {
+        image: '/leadership-course.jpg',
+        title: 'LEVEL 5 DIPLOMA IN LEADERSHIP AND MANAGEMENT FOR ADULT CARE',
+        instructor: 'ADE INAOLAJI',
+        price: '£2000',
+        oldPrice: '£2500'
+      },
+      {
+        image: '/family-learning.jpg',
+        title: 'LEVEL 3 DIPLOMA IN ADULT CARE',
+        instructor: 'ADE INAOLAJI',
+        price: '£1500',
+        oldPrice: '£1800'
+      }
+    ]
+  },
   // Add more extra data as needed
 ];
 
