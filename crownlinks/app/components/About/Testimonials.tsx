@@ -7,7 +7,7 @@ const testimonials = [
   {
     name: "Beatrice",
     role: "Mental Health Nurse",
-    text: "I’m really happy Crownlinks Academy. The information they provide (Powerpoint worksheets e.t.c) were excellent.",
+    text: "I'm really happy Crownlinks Academy. The information they provide (Powerpoint worksheets e.t.c) were excellent.",
   },
   {
     name: "Sarah Johnson",
@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
   const handleNext = () => setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="bg-[#f8f9fa] py-16">
+    <section className="bg-[#f8f9fa] py-16 px-6 sm:px-8 lg:px-20">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-[#242424]">
           What our learners are saying

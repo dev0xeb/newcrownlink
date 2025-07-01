@@ -18,12 +18,12 @@ const features = [
   ];
   
   const WhyChooseUsSection = () => (
-    <section className="bg-white py-16">
+    <section className="bg-white py-16 px-6 sm:px-8 lg:px-20">
       <div className="max-w-screen-xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+        <h2 className="text-[40px] md:text-4xl font-bold text-center mb-4">
           Why choose Crownlinks Academy.
         </h2>
-        <p className="text-lg text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+        <p className="text-[20px] text-gray-700 text-center mb-12 max-w-2xl mx-auto">
           Crownlinks Academy offers flexible, expert-led courses designed to build real-world skills. Whether you're starting out or upskilling, we make learning easy and impactful—anytime, anywhere.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
