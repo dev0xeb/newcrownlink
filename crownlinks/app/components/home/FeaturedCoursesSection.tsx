@@ -49,10 +49,10 @@ const defaultCourses = [
 
 const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you" }) => {
   return (
-    <section className="bg-white py-16 px-4 sm:px-6 lg:px-8 text-black">
+    <section className="bg-white py-16 px-6 sm:px-8 lg:px-20 text-black">
       <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10">
           {courses.map((course, index) => (
             <Link
               key={index}
@@ -78,12 +78,12 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                   />
                   <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
                 </div>
-                <h3 className="text-[20px] sm:text-sm font-semibold text-[#242424] mb-2 leading-tight min-h-[84px] max-h-[84px] overflow-hidden text-ellipsis line-clamp-3">
+                <h3 className="text-[20px] sm:text-lg md:text-xl font-semibold text-[#242424] mb-2 leading-tight min-h-[84px] max-h-[84px] overflow-hidden text-ellipsis line-clamp-3">
                   {course.title}
                 </h3>
                 <div className="flex items-baseline mt-4">
-                  <span className="text-gray-900 font-bold text-[27px] sm:text-2xl mr-2">{course.currentPrice}</span>
-                  <span className="text-gray-500 line-through text-[22px] sm:text-base">{course.originalPrice}</span>
+                  <span className="text-gray-900 font-bold text-[27px] sm:text-2xl md:text-3xl mr-2">{course.currentPrice}</span>
+                  <span className="text-gray-500 line-through text-[22px] sm:text-base md:text-lg">{course.originalPrice}</span>
                 </div>
                   <button
                     className="mt-6 w-full border border-[#1A6EDC] text-[#1A6EDC] font-semibold py-2 rounded-3xl transition-colors hover:bg-[#1A6EDC] hover:text-white"

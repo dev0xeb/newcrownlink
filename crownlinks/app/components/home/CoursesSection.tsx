@@ -6,17 +6,17 @@ import { coursesData } from '../../data/coursesData';
 
 const CoursesSection = () => {
   return (
-    <section className="bg-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 text-center">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#242424] mb-6">
+    <section className="bg-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-8">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 text-center">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#242424] mb-6">
           Expand Your Career Opportunity With <br className="hidden md:block" />Our Courses
         </h2>
-        <p className="text-lg sm:text-xl text-gray-700 mb-16 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl text-gray-700 mb-16 max-w-3xl mx-auto leading-relaxed">
           Gain practical skills and industry knowledge that open doors to new roles
           and help you stand out in today's competitive job market.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {coursesData.map((course, index) => (
             <Link
               key={index}
@@ -35,7 +35,7 @@ const CoursesSection = () => {
   <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#242424] mb-2 uppercase tracking-wide">
     {course.title}
   </h3>
-  <p className="text-gray-700 text-base sm:text-lg leading-relaxed flex-grow">
+  <p className="text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed flex-grow">
     {course.description}
   </p>
   <button

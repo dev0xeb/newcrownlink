@@ -27,7 +27,7 @@ const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
   enrolled,
   access
 }) => (
-  <section className="w-full max-w-screen-2xl mx-auto py-10 px-4 sm:px-8 flex flex-col md:flex-row gap-10 items-start text-lg">
+  <section className="w-full max-w-screen-2xl mx-auto py-10 px-4 sm:px-8 md:px-12 flex flex-col md:flex-row gap-10 md:gap-16 items-start text-lg">
     {/* Left: Course Image */}
     <div className="w-full md:basis-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
       <div className="w-full h-0 pb-[100%] md:pb-[80%] relative rounded-2xl overflow-hidden shadow-lg">
