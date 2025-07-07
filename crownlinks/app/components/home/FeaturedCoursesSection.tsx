@@ -49,48 +49,52 @@ const defaultCourses = [
 
 const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you" }) => {
   return (
-    <section className="bg-white py-16 px-6 sm:px-8 lg:px-20 text-black">
-      <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 md:gap-10">
+    <section className="bg-white text-black px-2 sm:px-4 lg:px-12 xl:px-24 py-8">
+      <div className="max-w-[1800px] mx-auto">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{title}</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-12">
           {courses.map((course, index) => (
             <Link
               key={index}
               href={`/courses/${course.slug}`}
-              className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200"
+              className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col w-full min-h-[480px]"
             >
-              <div className="relative w-full h-[180px] sm:h-[200px] overflow-hidden">
+              <div className="relative w-full h-[180px]">
                 <Image
                   src={course.courseImage}
                   alt={course.courseAlt}
                   layout="fill"
                   objectFit="cover"
+                  className="rounded-t-2xl"
                 />
               </div>
-              <div className="p-4">
-                <div className="flex items-center mb-3">
-                  <Image
-                    src={course.instructorImage}
-                    alt={course.instructorName}
-                    width={28}
-                    height={28}
-                    className="rounded-full mr-2 object-cover"
-                  />
-                  <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
+              <div className="p-6 flex flex-col flex-1 justify-between">
+                <div>
+                  <div className="flex items-center mb-4">
+                    <Image
+                      src={course.instructorImage}
+                      alt={course.instructorName}
+                      width={32}
+                      height={32}
+                      className="rounded-full mr-3 object-cover"
+                    />
+                    <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
+                  </div>
+                  <h3 className="text-lg md:text-xl font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[60px]">
+                    {course.title}
+                  </h3>
                 </div>
-                <h3 className="text-[20px] sm:text-lg md:text-xl font-semibold text-[#242424] mb-2 leading-tight min-h-[84px] max-h-[84px] overflow-hidden text-ellipsis line-clamp-3">
-                  {course.title}
-                </h3>
-                <div className="flex items-baseline mt-4">
-                  <span className="text-gray-900 font-bold text-[27px] sm:text-2xl md:text-3xl mr-2">{course.currentPrice}</span>
-                  <span className="text-gray-500 line-through text-[22px] sm:text-base md:text-lg">{course.originalPrice}</span>
-                </div>
+                <div>
+                  <div className="flex items-baseline mb-6">
+                    <span className="text-gray-900 font-bold text-2xl md:text-3xl mr-2">{course.currentPrice}</span>
+                    <span className="text-gray-500 line-through text-lg md:text-xl">{course.originalPrice}</span>
+                  </div>
                   <button
-                    className="mt-6 w-full border border-[#1A6EDC] text-[#1A6EDC] font-semibold py-2 rounded-3xl transition-colors hover:bg-[#1A6EDC] hover:text-white"
-                    // onClick={() => handleAddToCart(course)} // Uncomment and implement if you want functionality
+                    className="w-full border-2 border-blue-500 text-blue-500 font-semibold py-2 rounded-full transition-colors hover:bg-blue-500 hover:text-white"
                   >
-                  Add to cart
+                    Add to cart
                   </button>
+                </div>
               </div>
             </Link>
           ))}
@@ -100,4 +104,5 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   );
 };
 
-export default FeaturedCoursesSection; 
+export default FeaturedCoursesSection;
+

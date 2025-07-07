@@ -26,12 +26,10 @@ const Navbar = () => {
   );
 
   const isActive = (path: string) => {
-    // Remove trailing slashes and normalize paths
     const normalizedPathname = pathname.replace(/\/$/, '');
     const normalizedPath = path.replace(/\/$/, '');
     
     if (normalizedPath === '') {
-      // For home page, check if we're at root or /home
       return normalizedPathname === '' || normalizedPathname === '/home';
     }
     
@@ -42,7 +40,6 @@ const Navbar = () => {
     <nav className="bg-white shadow-md">
       <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 py-4">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
@@ -55,7 +52,6 @@ const Navbar = () => {
             </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center justify-center flex-1">
             <div className="flex items-center space-x-8">
               <Link 
@@ -109,7 +105,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Right side items */}
           <div className="hidden md:flex items-center space-x-6">
             <div className="relative">
               <Link href="/cart" className="flex items-center">
@@ -123,7 +118,6 @@ const Navbar = () => {
             </div>
           </div>
 
-          {/* Mobile menu button */}
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -144,7 +138,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile menu */}
       {isMobileMenuOpen && (
         <div className="md:hidden fixed top-16 left-0 w-full bg-white z-10 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">

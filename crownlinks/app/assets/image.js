@@ -7,7 +7,7 @@ import medication_management_course from './images/medication_management_course.
 import family_learning_course from './images/family-learning-course.png'
 import instructor_ade_profile from './images/instructor-ade-profile.jpg'
 import testimonials_profile from './images/Testimonials.jpg'
-
+import Hero from './images/Hero.png'
 const images ={
     logo,
     hero_img,
@@ -18,6 +18,7 @@ const images ={
     family_learning_course,
     instructor_ade_profile,
     testimonials_profile,
+    Hero,
 }
 
 export default images;

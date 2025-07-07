@@ -7,7 +7,7 @@ const Hero = () => {
     <section className="relative bg-black text-white flex items-center justify-center overflow-hidden min-h-[60vh] md:h-screen px-2 sm:px-4 md:px-12">
       <div className="absolute inset-0 z-0">
         <Image
-          src={images.hero_img}
+          src={images.Hero}
           alt="blue background"
           layout="fill"
           objectFit="cover"
@@ -21,7 +21,7 @@ const Hero = () => {
           with <br /> Crownlinks Academy and 
           Unlock Boundless <br /> Opportunities
         </h1>
-        <p className="text-sm xs:text-base sm:text-lg md:text-xl text-gray-300 mb-5 sm:mb-8 md:mb-10 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-1 sm:px-0">
+        <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white mb-5 sm:mb-8 md:mb-10 max-w-xs sm:max-w-md md:max-w-xl mx-auto px-1 sm:px-0">
           Learn in-demand skills that drive success in health, social care, leadership and
           management and transform your career today.
         </p>
