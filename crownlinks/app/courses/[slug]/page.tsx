@@ -1,3 +1,4 @@
+'use client'
 import CourseHeroSection from '@/app/components/course-description/CourseHeroSection';
 import CourseMainContent from '@/app/components/course-description/CourseMainContent';
 import RelatedCoursesSection from '@/app/components/home/FeaturedCoursesSection';
@@ -7,12 +8,14 @@ import Footer from '@/app/components/course-description/Footer';
 import Navbar from '@/app/components/Navbar';
 import { coursesData } from '@/app/data/coursesData';
 import images from '@/app/assets/image';
+import { useState } from 'react';
+import React from 'react';
 
 const extraCourseData = [
   {
     slug: "level-5-diploma-in-leadership-and-management-for-adult-care",
     instructor: 'ADE INAOLAJI',
-    category: 'Lea dership Management Course',
+    category: 'Leadership Management Course',
     students: 1,
     lastUpdated: 'February 27, 2025',
     overview: 'This qualification covers the knowledge and skills required to work in a leadership and management role in a range of settings where services support individuals with different needs. The qualification contains units which are competence based and some knowledge-based units.',
@@ -214,9 +217,10 @@ interface PageProps {
   params: { slug: string }
 }
 
-export default function Page({ params }: PageProps) {
-  const cardData = coursesData.find(c => c.slug === params.slug);
-  const extraData = extraCourseData.find(c => c.slug === params.slug);
+export default function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = React.use(params);
+  const cardData = coursesData.find(c => c.slug === slug);
+  const extraData = extraCourseData.find(c => c.slug === slug);
 
   if (!cardData || !extraData) {
     return <div className="text-center py-20 text-2xl">Course not found</div>;
@@ -237,9 +241,40 @@ export default function Page({ params }: PageProps) {
     },
   };
 
+  // Cart state
+  const [cartItems, setCartItems] = useState<any[]>([]);
+  const subtotal = cartItems.reduce((sum, item) => sum + (item.price || 0) * (item.quantity || 1), 0);
+  const handleRemoveItem = (id: number | string) => {
+    setCartItems(items => items.filter(item => item.id !== id));
+  };
+  const handleAddToCart = (course: any) => {
+    if (cartItems.some(item => item.slug === course.slug)) {
+      alert('Course has already been added to cart');
+      return;
+    }
+    setCartItems([
+      ...cartItems,
+      {
+        id: course.id || course.slug,
+        image: course.courseImage || course.image || '',
+        title: course.title,
+        price: Number(course.currentPrice?.replace(/[^\d.]/g, '')) || course.price || 0,
+        description: course.description || 'No description available.',
+        quantity: 1,
+        slug: course.slug,
+      },
+    ]);
+  };
+  const handleClearCart = () => setCartItems([]);
+
   return (
     <main>
-      <Navbar />
+      <Navbar
+        cartItems={cartItems}
+        subtotal={subtotal}
+        handleRemoveItem={handleRemoveItem}
+        handleClearCart={handleClearCart}
+      />
       <CourseHeroSection
   image={course.image}
   title={course.title}
@@ -253,7 +288,7 @@ export default function Page({ params }: PageProps) {
   access={course.card.access}
 />
       <CourseMainContent overview={course.overview} whoFor={course.whoFor} whatLearn={course.whatLearn} requirements={course.requirements} />
-      <RelatedCoursesSection />
+      <RelatedCoursesSection onAddToCart={handleAddToCart} cartItems={cartItems} />
       <TestimonialsSection  />
       <CallToActionSection />
       <Footer />

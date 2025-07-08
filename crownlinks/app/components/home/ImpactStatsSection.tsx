@@ -5,9 +5,9 @@ const stats = [
 ];
 
 const ImpactStatsSection = () => (
-  <section className="bg-white py-12">
-    <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-[200px]">
-      <h2 className="text-2xl md:text-4xl font-bold text-center mb-12 text-[#242424]">
+  <section className="bg-[#F1F7FF] h-[396px]  py-12">
+    <div className="max-w-9xl pt-[50px] mx-auto px-6 sm:px-8 md:px-12 lg:px-[200px]">
+      <h2 className="text-[26px] md:text-2xl font-bold text-center mb-12 text-[#242424]">
         Delivering Measurable Impact in Online Education
       </h2>
       <div className="flex flex-col md:flex-row justify-between items-center md:space-x-24 space-y-8 md:space-y-0">
