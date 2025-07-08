@@ -7,10 +7,19 @@ import { usePathname } from 'next/navigation';
 import images from '../assets/image';
 import icons from '../assets/icons';
 import { navbarStyles as styles } from '../styles/navbar';
+import CartDrawer from './CartDrawer';
 
-const Navbar = () => {
+type NavbarProps = {
+  cartItems: any[]; // Or your specific cart item type
+  subtotal: number;
+  handleRemoveItem: (id: number | string) => void;
+  handleClearCart: () => void; // Added handleClearCart to the type
+};
+
+const Navbar = ({ cartItems, subtotal, handleRemoveItem, handleClearCart }: NavbarProps) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
+  const [isCartOpen, setIsCartOpen] = useState(false);
   const pathname = usePathname();
 
   const courses = ['Web Development', 'Mobile Development', 'Data Science'];
@@ -107,10 +116,10 @@ const Navbar = () => {
 
           <div className="hidden md:flex items-center space-x-6">
             <div className="relative">
-              <Link href="/cart" className="flex items-center">
+              <button onClick={() => setIsCartOpen(true)} className="flex items-center focus:outline-none">
                 <CartIcon />
-                <span className={styles.cart.counter}>0</span>
-              </Link>
+                <span className={styles.cart.counter}>{cartItems.length}</span>
+              </button>
             </div>
             <div className="flex items-center space-x-3">
               <Link href="/login" className={styles.button.secondary}>Sign in</Link>
@@ -200,6 +209,15 @@ const Navbar = () => {
           </div>
         </div>
       )}
+      {/* Cart Drawer */}
+      <CartDrawer
+        isOpen={isCartOpen}
+        onClose={() => setIsCartOpen(false)}
+        cartItems={cartItems}
+        subtotal={subtotal}
+        onRemoveItem={handleRemoveItem}
+        onClearCart={handleClearCart}
+      />
     </nav>
   );
 };

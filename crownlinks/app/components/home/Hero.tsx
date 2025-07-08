@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-5 text-center max-w-9xl mx-auto px-2 sm:px-8 md:px-12 lg:px-20 w-full">
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-6 md:mb-8 leading-tight tracking-tight">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[56px] font-bold mb-3 sm:mb-6 md:mb-8 leading-tight tracking-tight">
           Empower Your Future 
           with <br /> Crownlinks Academy and 
           Unlock Boundless <br /> Opportunities
@@ -25,7 +25,7 @@ const Hero = () => {
           Learn in-demand skills that drive success in health, social care, leadership and
           management and transform your career today.
         </p>
-        <a href="#" className="inline-block w-full sm:w-auto md:w-auto bg-white text-black font-semibold py-3 px-8 rounded-lg shadow-lg hover:bg-gray-100 transition-colors">
+        <a href="#" className="inline-block bg-white text-black font-bold py-4 px-10 rounded-2xl shadow-lg">
           Get started
         </a>
       </div>
