@@ -72,42 +72,42 @@ const defaultCourses = [
 
 const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you", onAddToCart, cartItems = [] }: FeaturedCoursesSectionProps) => {
   return (
-    <section className="bg-white text-black px-2 sm:px-4 lg:px-12 xl:px-24 py-8">
+    <section className="bg-white text-black px-2 sm:px-4  lg:px-24 py-8">
       <div className="max-w-[1800px] mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-8 xl:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-12">
           {courses.map((course, index) => {
             const inCart = cartItems.some(item => item.slug === course.slug);
             return (
               <div
-                key={index}
+              key={index}
                 className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col w-full min-h-[480px] h-full"
-              >
+            >
                 <Link href={`/courses/${course.slug}`}>
                   <div className="relative w-full h-[180px]">
-                    <Image
-                      src={course.courseImage}
-                      alt={course.courseAlt}
-                      layout="fill"
-                      objectFit="cover"
+                <Image
+                  src={course.courseImage}
+                  alt={course.courseAlt}
+                  layout="fill"
+                  objectFit="cover"
                       className="rounded-t-2xl"
-                    />
-                  </div>
+                />
+              </div>
                   <div className="p-6 flex flex-col flex-1 justify-between">
                     <div>
                       <div className="flex items-center mb-4">
-                        <Image
-                          src={course.instructorImage}
-                          alt={course.instructorName}
+                  <Image
+                    src={course.instructorImage}
+                    alt={course.instructorName}
                           width={32}
                           height={32}
                           className="rounded-full mr-3 object-cover"
-                        />
-                        <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
-                      </div>
+                  />
+                  <span className="text-gray-700 text-sm sm:text-base">By {course.instructorName}</span>
+                </div>
                       <h3 className="text-lg md:text-xl font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[60px]">
-                        {course.title}
-                      </h3>
+                  {course.title}
+                </h3>
                     </div>
                     <div>
                       <div className="flex items-baseline mb-6">
@@ -115,7 +115,7 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                         <span className="text-gray-500 line-through text-lg md:text-xl">{course.originalPrice}</span>
                       </div>
                     </div>
-                  </div>
+                </div>
                 </Link>
                 <div className="px-6 pb-6 mt-auto">
                   <button
@@ -135,5 +135,5 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   );
 };
 
-export default FeaturedCoursesSection;
+export default FeaturedCoursesSection; 
 

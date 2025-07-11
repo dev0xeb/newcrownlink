@@ -12,6 +12,9 @@ module.exports = {
     extend: {
       screens: {
         'navbarBreakpoint': '976px',
+        sm: '576px',
+        md: '768px',
+        lg: '1024px',
       },
     },
   },
