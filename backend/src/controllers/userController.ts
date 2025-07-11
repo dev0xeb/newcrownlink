@@ -21,15 +21,16 @@ export async function login(req: Request, res: Response, next: NextFunction) {
     }
 }
 
-export async function googleAuth(req: Request, res: Response, next: NextFunction) {
+export async function googleAuth(req: Request, res: Response, next: NextFunction): Promise<void> {
     try {
       const { idToken } = req.body;
       if (!idToken) {
-        return res.status(400).json({ error: 'idToken is required' });
+        res.status(400).json({ error: 'idToken is required' });
+        return;
       }
       const result = await loginOrRegisterGoogleUser(idToken);
       res.status(200).json(result);
     } catch (err) {
       next(err);
     }
-}
+};
