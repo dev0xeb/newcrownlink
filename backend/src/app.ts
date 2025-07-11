@@ -1,6 +1,7 @@
 import express from 'express';
 import userRoutes from './routes/userRoutes';
 import adminRoutes from './routes/adminRoutes'
+import courseRoutes from './routes/courseRoutes';
 import { errorHandler } from './middleware/errorHandling';
 import dotenv from 'dotenv';
 import { createDefaultAdmin } from './utils/seedAdmin';
@@ -25,6 +26,7 @@ async function startServer() {
   
   app.use('/api/auth', userRoutes);
   app.use('/api/admin', adminRoutes);
+  app.use('/api', courseRoutes);
   app.use(errorHandler);
 }
 
