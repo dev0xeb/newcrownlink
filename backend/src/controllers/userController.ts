@@ -1,5 +1,6 @@
 import {Request, Response, NextFunction } from 'express';
 import { registerUser, loginUser, loginOrRegisterGoogleUser } from '../services/userService';
+import jwt from 'jsonwebtoken';
 
 export async function register(req: Request, res: Response, next: NextFunction) {
     try{
@@ -11,11 +12,28 @@ export async function register(req: Request, res: Response, next: NextFunction) 
     }
 }
 
-export async function login(req: Request, res: Response, next: NextFunction) {
+export async function login(req: Request, res: Response, next: NextFunction): Promise<void> {
     try{
         const { email, password } = req.body;
-        const result = await loginUser({email, password});
-        res.status(200).json(result);
+        const user = await loginUser({email, password});
+        if (user) {
+            const token = jwt.sign(
+                { id: user.id, email: user.email, role: user.role },
+                process.env.JWT_SECRET as string,
+                { expiresIn: '1h' }
+            );
+            res.json({
+                token,
+                user: {
+                    id: user.id,
+                    email: user.email,
+                    name: user.name,
+                    role: user.role
+                }
+            });
+        } else {
+            res.status(401).json({ error: 'Invalid credentials' });
+        }
     } catch (err){
         next(err)
     }

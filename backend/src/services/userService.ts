@@ -83,11 +83,7 @@ export async function loginUser({ email, password }: { email: string; password: 
       throw new Error('Invalid password');
     }
   
-    return {
-      id: user.id,
-      email: user.email,
-      name: user.name,
-    };
+    return { id: user.id, email: user.email, name: user.name, role: user.role };
   }
 
 
