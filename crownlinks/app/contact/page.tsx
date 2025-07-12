@@ -4,7 +4,7 @@ import ContactFormSection from "@/app/components/contact/ContactFormSection";
 import ContactMapSection from "@/app/components/contact/ContactMapSection";
 import CallToActionSection from "@/app/components/About/CallToActionSection";
 import Footer from "@/app/components/Footer";
-import Navbar from "../../components/Navbar";
+import Navbar from "../components/Navbar";
 import { useState } from "react";
 
 export default function ContactPage() {
@@ -16,12 +16,7 @@ export default function ContactPage() {
   const handleClearCart = () => setCartItems([]);
   return (
     <main>
-        <Navbar
-        cartItems={cartItems}
-        subtotal={subtotal}
-        handleRemoveItem={handleRemoveItem}
-        handleClearCart={handleClearCart}
-      />
+        <Navbar />
       <ContactHeroSection />
       <ContactFormSection />
       <ContactMapSection />

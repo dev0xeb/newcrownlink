@@ -33,29 +33,29 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="bg-white py-16 sm:py-24 lg:py-32 px-4 sm:px-6 md:px-12 lg:px-8">
-      <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-[#242424] mb-4">
+    <section className="bg-white py-16 sm:py-24 lg:py-32 xl:py-40 px-4 sm:px-6 md:px-12 lg:px-8 xl:px-12">
+      <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32">
+        <div className="text-center mb-12 xl:mb-16">
+          <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-[#242424] mb-4 xl:mb-6">
             Frequently Asked Questions
           </h2>
-          <p className="text-lg sm:text-xl md:text-2xl text-gray-700">
+          <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl text-gray-700">
             We answered your questions so you don't have to ask them.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4 xl:space-y-6">
           {faqData.map((faq, index) => (
-            <div key={index} className="border-b border-gray-200 py-4">
+            <div key={index} className="border-b border-gray-200 py-4 xl:py-6">
               <button
                 className="flex justify-between items-center w-full text-left focus:outline-none"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-lg sm:text-xl md:text-2xl font-semibold text-[#242424]">
+                <span className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-semibold text-[#242424]">
                   {faq.question}
                 </span>
                 <svg
-                  className={`h-6 w-6 text-gray-500 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
+                  className={`h-6 w-6 xl:h-8 xl:w-8 text-gray-500 transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -65,7 +65,7 @@ const FAQSection = () => {
                 </svg>
               </button>
               {openIndex === index && (
-                <p className="mt-4 text-gray-700 text-base sm:text-lg md:text-xl leading-relaxed">
+                <p className="mt-4 xl:mt-6 text-gray-700 text-base sm:text-lg md:text-xl xl:text-2xl leading-relaxed">
                   {faq.answer}
                 </p>
               )}

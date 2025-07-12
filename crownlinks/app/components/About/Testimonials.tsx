@@ -29,14 +29,14 @@ const TestimonialsSection = () => {
   const handleNext = () => setCurrent((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
 
   return (
-    <section className="bg-[#f8f9fa] py-10 sm:py-16 px-4 sm:px-8 md:px-12 lg:px-20">
-      <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-8 sm:mb-12 text-[#242424]">
+    <section className="bg-[#f8f9fa] py-10 sm:py-16 xl:py-24 px-4 sm:px-8 md:px-12 lg:px-20 xl:px-32">
+      <div className="max-w-6xl mx-auto px-2 sm:px-4 md:px-8 xl:px-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold text-center mb-8 sm:mb-12 xl:mb-16 text-[#242424]">
           What our learners are saying
         </h2>
         <div className="relative">
           {/* Desktop: show both, Mobile/Tablet: show one with navigation */}
-          <div className="hidden md:grid grid-cols-2 gap-8">
+          <div className="hidden md:grid grid-cols-2 gap-8 xl:gap-12">
             {testimonials.map((t, idx) => (
               <TestimonialCard key={idx} {...t} />
             ))}
@@ -77,18 +77,18 @@ const TestimonialsSection = () => {
 };
 
 const TestimonialCard = ({ name, role, text }: TestimonialCardProps) => (
-  <div className="bg-white rounded-2xl shadow-lg p-10 flex flex-col items-center text-center min-h-[370px] md:min-h-[320px]">
-    <div className="w-20 h-20 rounded-full bg-gray-200 mb-4 overflow-hidden">
+  <div className="bg-white rounded-2xl shadow-lg p-10 xl:p-12 flex flex-col items-center text-center min-h-[370px] md:min-h-[320px] xl:min-h-[380px]">
+    <div className="w-20 h-20 xl:w-24 xl:h-24 rounded-full bg-gray-200 mb-4 xl:mb-6 overflow-hidden">
       <Image src={images.testimonials_profile} alt={`${name} profile`} />
     </div>
     {/* Stars */}
-    <div className="flex mb-4">
+    <div className="flex mb-4 xl:mb-6">
       {Array(5)
         .fill(0)
         .map((_, i) => (
           <svg
             key={i}
-            className="w-6 h-6 text-[#FFC107]"
+            className="w-6 h-6 xl:w-8 xl:h-8 text-[#FFC107]"
             fill="currentColor"
             viewBox="0 0 20 20"
           >
@@ -96,9 +96,9 @@ const TestimonialCard = ({ name, role, text }: TestimonialCardProps) => (
           </svg>
         ))}
     </div>
-    <p className="text-gray-700 mb-6 text-base sm:text-lg md:text-xl">{text}</p>
-    <div className="font-bold text-lg md:text-xl mb-1">{name}</div>
-    <div className="text-gray-500 text-base sm:text-lg md:text-xl">{role}</div>
+    <p className="text-gray-700 mb-6 xl:mb-8 text-base sm:text-lg md:text-xl xl:text-2xl">{text}</p>
+    <div className="font-bold text-lg md:text-xl xl:text-2xl mb-1 xl:mb-2">{name}</div>
+    <div className="text-gray-500 text-base sm:text-lg md:text-xl xl:text-xl">{role}</div>
   </div>
 );
 

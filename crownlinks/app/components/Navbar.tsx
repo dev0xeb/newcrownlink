@@ -8,15 +8,11 @@ import images from '../assets/image';
 import icons from '../assets/icons';
 import { navbarStyles as styles } from '../styles/navbar';
 import CartDrawer from './CartDrawer';
+import { useCart } from '../components/checkout/CartContext';
 
-type NavbarProps = {
-  cartItems: any[]; // Or your specific cart item type
-  subtotal: number;
-  handleRemoveItem: (id: number | string) => void;
-  handleClearCart: () => void; // Added handleClearCart to the type
-};
-
-const Navbar = ({ cartItems, subtotal, handleRemoveItem, handleClearCart }: NavbarProps) => {
+const Navbar = () => {
+  const { cart, removeFromCart, clearCart } = useCart();
+  const subtotal = cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isCoursesDropdownOpen, setIsCoursesDropdownOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -118,7 +114,7 @@ const Navbar = ({ cartItems, subtotal, handleRemoveItem, handleClearCart }: Navb
             <div className="relative">
               <button onClick={() => setIsCartOpen(true)} className="flex items-center focus:outline-none">
                 <CartIcon />
-                <span className={styles.cart.counter}>{cartItems.length}</span>
+                <span className={styles.cart.counter}>{cart.length}</span>
               </button>
             </div>
             <div className="flex items-center space-x-3">
@@ -200,7 +196,7 @@ const Navbar = ({ cartItems, subtotal, handleRemoveItem, handleClearCart }: Navb
               <div className="flex flex-col space-y-3 px-3">
                 <Link href="/cart" className="flex items-center space-x-2 text-gray-700 hover:text-[#1A6EDC]">
                   <CartIcon className="w-6 h-6" />
-                  <span className="text-base font-medium">Cart (0)</span>
+                  <span className="text-base font-medium">Cart ({cart.length})</span>
                 </Link>
                 <Link href="/login" className={styles.button.secondary}>Login</Link>
                 <Link href="/signup" className={styles.button.primary}>Sign Up</Link>
@@ -213,10 +209,6 @@ const Navbar = ({ cartItems, subtotal, handleRemoveItem, handleClearCart }: Navb
       <CartDrawer
         isOpen={isCartOpen}
         onClose={() => setIsCartOpen(false)}
-        cartItems={cartItems}
-        subtotal={subtotal}
-        onRemoveItem={handleRemoveItem}
-        onClearCart={handleClearCart}
       />
     </nav>
   );
