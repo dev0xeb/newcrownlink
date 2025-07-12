@@ -4,7 +4,7 @@ import CourseMainContent from '@/app/components/course-description/CourseMainCon
 import RelatedCoursesSection from '@/app/components/home/FeaturedCoursesSection';
 import TestimonialsSection from '@/app/components/About/Testimonials';
 import CallToActionSection from '@/app/components/home/CtaSection';
-import Footer from '@/app/components/course-description/Footer';
+import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
 import { coursesData } from '@/app/data/coursesData';
 import images from '@/app/assets/image';
@@ -269,12 +269,7 @@ export default function Page({ params }: { params: Promise<{ slug: string }> }) 
 
   return (
     <main>
-      <Navbar
-        cartItems={cartItems}
-        subtotal={subtotal}
-        handleRemoveItem={handleRemoveItem}
-        handleClearCart={handleClearCart}
-      />
+      <Navbar/>
       <CourseHeroSection
   image={course.image}
   title={course.title}

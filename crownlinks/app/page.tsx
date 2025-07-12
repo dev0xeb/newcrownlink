@@ -40,12 +40,7 @@ export default function Home() {
   const handleClearCart = () => setCartItems([]);
   return (
     <main className="overflow">
-      <Navbar
-        cartItems={cartItems}
-        subtotal={subtotal}
-        handleRemoveItem={handleRemoveItem}
-        handleClearCart={handleClearCart}
-      />
+      <Navbar/>
       <Hero/>
       <AboutSection/>
       <FeaturedCoursesSection onAddToCart={handleAddToCart} cartItems={cartItems} />

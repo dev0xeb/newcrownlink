@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import images from '../../assets/image';
+import { useCart } from '../../components/checkout/CartContext';
 
 type Course = {
   id: string;
@@ -70,14 +71,16 @@ const defaultCourses = [
   },
 ];
 
-const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you", onAddToCart, cartItems = [] }: FeaturedCoursesSectionProps) => {
+const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you" }: FeaturedCoursesSectionProps) => {
+  const { addToCart } = useCart();
+
   return (
     <section className="bg-white text-black px-2 sm:px-4  lg:px-24 py-8">
       <div className="max-w-[1800px] mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-10 text-center">{title}</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-12">
           {courses.map((course, index) => {
-            const inCart = cartItems.some(item => item.slug === course.slug);
+            const inCart = false; // No cartItems prop, so always false for now
             return (
               <div
               key={index}
@@ -120,10 +123,16 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                 <div className="px-6 pb-6 mt-auto">
                   <button
                     className="w-full border-2 border-blue-500 text-blue-500 font-semibold py-2 rounded-full transition-colors hover:bg-blue-500 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
-                    onClick={() => !inCart && onAddToCart && onAddToCart(course)}
-                    disabled={inCart}
+                    onClick={() => addToCart({
+                      id: course.id,
+                      image: course.courseImage,
+                      title: course.title,
+                      price: Number(course.currentPrice.replace('£', '')), 
+                      quantity: 1,
+                      description: course.courseAlt || '',
+                    })}
                   >
-                    {inCart ? 'In cart' : 'Add to cart'}
+                    Add to cart
                   </button>
                 </div>
               </div>

@@ -13,7 +13,7 @@ const ImageBanner = () => {
         height={600}
         layout="responsive"
         objectFit="cover"
-        className="w-full md:h-[400px] lg:h-[600px]"
+        className="w-full md:h-[400px] lg:h-[600px] xl:h-[800px]"
       />
     </section>
   );
