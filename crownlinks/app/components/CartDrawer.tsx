@@ -37,11 +37,11 @@ export default function CartDrawer({
         aria-label="Close cart"
       />
       <aside
-        className="fixed top-0 right-0 h-[100vh] w-[600px] xl:w-[700px] bg-white shadow-2xl z-50 flex flex-col"
+        className="fixed top-0 right-0 h-full w-full sm:w-[400px] md:w-[500px] lg:w-[600px] xl:w-[700px] bg-white shadow-2xl z-50 flex flex-col"
         aria-modal="true"
         role="dialog"
       >
-        <div className="flex items-center justify-between px-6 xl:px-8 py-4 xl:py-6 border-b !border-[#E4E4E4]">
+        <div className="flex items-center justify-between px-4 sm:px-6 xl:px-8 py-4 xl:py-6 border-b !border-[#E4E4E4]">
           <h2 className="text-xl xl:text-2xl font-semibold">Your Cart</h2>
           <button
             onClick={onClose}
@@ -51,7 +51,7 @@ export default function CartDrawer({
             &times;
           </button>
         </div>
-        <div className="flex-1 overflow-y-auto px-6 xl:px-8 py-4 xl:py-6">
+        <div className="flex-1 overflow-y-auto px-4 sm:px-6 xl:px-8 py-4 xl:py-6">
           {cart.length === 0 ? (
             <div className="text-center text-gray-500 mt-10 xl:mt-16 xl:text-lg">Your cart is empty.</div>
           ) : (
@@ -97,7 +97,7 @@ export default function CartDrawer({
           )}
         </div>
         {/* Footer */}
-        <div className="border-t !border-[#E4E4E4] px-6 xl:px-8 py-4 xl:py-6">
+        <div className="border-t !border-[#E4E4E4] px-4 sm:px-6 xl:px-8 py-4 xl:py-6">
           <div className="flex justify-between items-center mb-4 xl:mb-6">
             <span className="font-medium xl:text-lg">Subtotal price</span>
             <span className="font-bold text-lg xl:text-xl">£{subtotal.toFixed(2)}</span>
