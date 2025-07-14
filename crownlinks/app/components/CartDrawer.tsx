@@ -41,7 +41,7 @@ export default function CartDrawer({
         aria-modal="true"
         role="dialog"
       >
-        <div className="flex items-center justify-between px-6 xl:px-8 py-4 xl:py-6 border-b">
+        <div className="flex items-center justify-between px-6 xl:px-8 py-4 xl:py-6 border-b !border-[#E4E4E4]">
           <h2 className="text-xl xl:text-2xl font-semibold">Your Cart</h2>
           <button
             onClick={onClose}
@@ -56,7 +56,7 @@ export default function CartDrawer({
             <div className="text-center text-gray-500 mt-10 xl:mt-16 xl:text-lg">Your cart is empty.</div>
           ) : (
             cart.map((item, idx) => (
-              <div key={item.id || idx} className="flex items-start gap-4 xl:gap-6 mb-6 xl:mb-8 border-b pb-4 xl:pb-6">
+              <div key={item.id || idx} className="flex items-start gap-4 xl:gap-6 mb-6 xl:mb-8 border-b !border-[#E4E4E4] pb-4 xl:pb-6">
                 <div className="w-16 h-16 xl:w-20 xl:h-20 flex-shrink-0 relative">
                   <Image
                     src={item.image}
@@ -97,7 +97,7 @@ export default function CartDrawer({
           )}
         </div>
         {/* Footer */}
-        <div className="border-t px-6 xl:px-8 py-4 xl:py-6">
+        <div className="border-t !border-[#E4E4E4] px-6 xl:px-8 py-4 xl:py-6">
           <div className="flex justify-between items-center mb-4 xl:mb-6">
             <span className="font-medium xl:text-lg">Subtotal price</span>
             <span className="font-bold text-lg xl:text-xl">£{subtotal.toFixed(2)}</span>

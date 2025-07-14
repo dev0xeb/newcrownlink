@@ -42,14 +42,14 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow p-6 xl:p-10 w-full max-w-xl flex flex-col gap-4 xl:gap-6">
-      <h2 className="text-2xl font-semibold mb-4 xl:text-3xl">Customer Information</h2>
+    <form onSubmit={handleSubmit} className="bg-white rounded-2xl shadow p-4 sm:p-6 xl:p-10 w-full max-w-xl flex flex-col gap-3 sm:gap-4 xl:gap-6">
+      <h2 className="text-xl sm:text-2xl font-semibold mb-2 sm:mb-4 xl:text-3xl">Customer Information</h2>
       <input
         name="firstName"
         value={form.firstName}
         onChange={handleChange}
         placeholder="Enter your first name"
-        className={`rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg ${errors.firstName ? 'border border-red-500' : ''}`}
+        className={`rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg ${errors.firstName ? 'border border-red-500' : ''}`}
       />
       {errors.firstName && <span className="text-red-500 text-xs">{errors.firstName}</span>}
       <input
@@ -57,7 +57,7 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
         value={form.lastName}
         onChange={handleChange}
         placeholder="Enter your last name"
-        className={`rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg ${errors.lastName ? 'border border-red-500' : ''}`}
+        className={`rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg ${errors.lastName ? 'border border-red-500' : ''}`}
       />
       {errors.lastName && <span className="text-red-500 text-xs">{errors.lastName}</span>}
       <input
@@ -65,15 +65,15 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
         value={form.email}
         onChange={handleChange}
         placeholder="Enter your email address"
-        className={`rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg ${errors.email ? 'border border-red-500' : ''}`}
+        className={`rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg ${errors.email ? 'border border-red-500' : ''}`}
       />
       {errors.email && <span className="text-red-500 text-xs">{errors.email}</span>}
-      <div className="flex gap-2">
+      <div className="flex flex-col sm:flex-row gap-2">
         <select
           name="country"
           value={form.country}
           onChange={handleChange}
-          className={`rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg w-32 ${errors.country ? 'border border-red-500' : ''}`}
+          className={`rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg w-full sm:w-32 ${errors.country ? 'border border-red-500' : ''}`}
         >
           <option value="">+44</option>
           {/* Add more country codes as needed */}
@@ -83,7 +83,7 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
           value={form.phone}
           onChange={handleChange}
           placeholder="Enter your phone number"
-          className={`flex-1 rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg ${errors.phone ? 'border border-red-500' : ''}`}
+          className={`flex-1 rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg ${errors.phone ? 'border border-red-500' : ''}`}
         />
       </div>
       {errors.phone && <span className="text-red-500 text-xs">{errors.phone}</span>}
@@ -91,7 +91,7 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
         name="country"
         value={form.country}
         onChange={handleChange}
-        className={`rounded-lg bg-gray-100 px-4 py-3 xl:px-6 xl:py-4 outline-none text-base xl:text-lg ${errors.country ? 'border border-red-500' : ''}`}
+        className={`rounded-lg bg-gray-100 px-3 py-2 sm:px-4 sm:py-3 xl:px-6 xl:py-4 outline-none text-sm sm:text-base xl:text-lg ${errors.country ? 'border border-red-500' : ''}`}
       >
         <option value="">Select your country</option>
         <option value="uk">United Kingdom</option>
@@ -102,7 +102,7 @@ const CustomerInfoForm: React.FC<CustomerInfoFormProps> = ({ onSubmit, isLoading
       {errors.country && <span className="text-red-500 text-xs">{errors.country}</span>}
       <button
         type="submit"
-        className="w-full bg-[#1976d2] text-white font-semibold py-3 xl:py-4 rounded-full text-lg xl:text-xl mt-4 xl:mt-6 hover:bg-[#145bb0] transition"
+        className="w-full bg-[#1976d2] text-white font-semibold py-2 sm:py-3 xl:py-4 rounded-full text-base sm:text-lg xl:text-xl mt-3 sm:mt-4 xl:mt-6 hover:bg-[#145bb0] transition"
         disabled={isLoading}
       >
         {isLoading ? 'Processing...' : 'Continue to Pay'}

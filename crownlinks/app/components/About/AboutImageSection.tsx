@@ -13,7 +13,7 @@ const AboutImage = () => (
         objectFit="cover"
         className="rounded-lg shadow-lg"
       />
-      <p className="mt-6 xl:mt-8 text-base sm:text-lg md:text-xl xl:text-2xl text-center">
+      <p className="mt-6 xl:mt-8 text-[40px] text-center">
         {/* Add your about image section text here */}
       </p>
     </div>
