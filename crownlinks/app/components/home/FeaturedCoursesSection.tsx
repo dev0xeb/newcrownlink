@@ -75,10 +75,10 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   const { addToCart } = useCart();
 
   return (
-    <section className="bg-white text-black px-2 sm:px-4  lg:px-24 py-8">
+    <section className="bg-white text-black px-[40px] lg:px-24 py-8 xl:mt-16">
       <div className="max-w-[1800px] mx-auto">
         <h2 className="text-2xl sm:text-3xl md:text-4xl xl:text-5xl font-bold mb-10 text-center">{title}</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
           {courses.map((course, index) => {
             const inCart = false; // No cartItems prop, so always false for now
             return (
@@ -102,13 +102,13 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                   <Image
                     src={course.instructorImage}
                     alt={course.instructorName}
-                          width={32}
-                          height={32}
+                          width={22}
+                          height={22}
                           className="rounded-full mr-3 object-cover"
                   />
-                  <span className="text-gray-700 text-sm sm:text-base xl:text-lg">By {course.instructorName}</span>
+                  <span className="text-gray-700 text-[12px] sm:text-base xl:text-[12px]">By {course.instructorName}</span>
                 </div>
-                      <h3 className="text-[16px] font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[48px]">
+                      <h3 className="text-[16px] font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[48px] lg:min-h-[64px]">
                   {course.title}
                 </h3>
                       <div className="flex-grow"></div>
