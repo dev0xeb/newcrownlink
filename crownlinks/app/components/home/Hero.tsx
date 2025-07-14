@@ -16,7 +16,7 @@ const Hero = () => {
       </div>
 
       <div className="relative z-5 text-center max-w-9xl mx-auto px-2 sm:px-8 md:px-12 lg:px-20 xl:px-32 w-full">
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[56px] xl:text-[72px] font-bold mb-3 sm:mb-6 md:mb-8 xl:mb-12 leading-tight tracking-tight">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[56px] font-bold mb-3 sm:mb-6 md:mb-8 xl:mb-12 leading-tight tracking-tight">
           Empower Your Future 
           with <br /> Crownlinks Academy and 
           Unlock Boundless <br /> Opportunities

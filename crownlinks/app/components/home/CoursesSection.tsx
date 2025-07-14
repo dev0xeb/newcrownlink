@@ -8,10 +8,10 @@ const CoursesSection = () => {
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-32 xl:py-40 px-4 sm:px-6 md:px-12 lg:px-8 xl:px-12">
       <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-[#242424] mb-6 xl:mb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-5xl font-bold text-[#242424] mb-6 xl:mb-8">
           Expand Your Career Opportunity With <br className="hidden md:block" />Our Courses
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl text-gray-700 mb-16 xl:mb-20 max-w-3xl xl:max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl xl:text-xl text-gray-700 mb-16 xl:mb-20 max-w-3xl xl:max-w-4xl mx-auto leading-relaxed">
           Gain practical skills and industry knowledge that open doors to new roles
           and help you stand out in today's competitive job market.
         </p>
@@ -32,10 +32,10 @@ const CoursesSection = () => {
                 />
               </div>
               <div className="p-6 xl:p-8 text-left flex flex-col flex-grow">
-  <h3 className="text-lg sm:text-xl md:text-2xl xl:text-3xl font-bold text-[#242424] mb-2 xl:mb-4 uppercase tracking-wide">
+  <h3 className="text-lg sm:text-xl md:text-2xl xl:text-2xl font-bold text-[#242424] mb-2 xl:mb-4 uppercase tracking-wide">
     {course.title}
   </h3>
-  <p className="text-gray-700 text-base sm:text-lg md:text-xl xl:text-2xl leading-relaxed flex-grow">
+  <p className="text-gray-700 text-base sm:text-lg md:text-xl xl:text-xl leading-relaxed flex-grow">
     {course.description}
   </p>
   <button

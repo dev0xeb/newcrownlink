@@ -23,10 +23,10 @@ const WhyChooseUs = () => {
   return (
     <section className="bg-white py-16 sm:py-24 lg:py-32 xl:py-40 px-4 sm:px-6 md:px-12 lg:px-8 xl:px-12">
       <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32 text-center">
-        <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold text-[#242424] mb-6 xl:mb-8">
+        <h2 className="text-4xl sm:text-5xl md:text-6xl xl:text-5xl font-bold text-[#242424] mb-6 xl:mb-8">
           Why choose Crownlinks Academy.
         </h2>
-        <p className="text-lg sm:text-xl md:text-2xl xl:text-3xl text-gray-700 mb-16 xl:mb-20 max-w-3xl xl:max-w-4xl mx-auto leading-relaxed">
+        <p className="text-lg sm:text-xl md:text-2xl xl:text-xl text-gray-700 mb-16 xl:mb-20 max-w-3xl xl:max-w-4xl mx-auto leading-relaxed">
           Crownlinks Academy offers flexible, expert-led courses designed to build real-
           world skills. Whether you're starting out or upskilling, we make learning easy and
           impactful—anytime, anywhere.
@@ -42,7 +42,7 @@ const WhyChooseUs = () => {
               {/* <div className="absolute inset-0 z-0 bg-gray-300 opacity-0 group-hover:opacity-10 transition-opacity duration-300"></div> */}
               
               <div className="relative z-10">
-                <h3 className="text-2xl md:text-3xl xl:text-4xl font-bold text-[#242424] mb-2 xl:mb-4">
+                <h3 className="text-2xl md:text-3xl xl:text-2xl font-bold text-[#242424] mb-2 xl:mb-4">
                   {feature.title}
                 </h3>
                 <p className="text-gray-700 text-base md:text-lg xl:text-xl leading-relaxed">
