@@ -21,11 +21,11 @@ const Hero = () => {
           with <br /> Crownlinks Academy and 
           Unlock Boundless <br /> Opportunities
         </h1>
-        <p className="text-sm xs:text-base sm:text-lg md:text-xl xl:text-2xl text-white mb-5 sm:mb-8 md:mb-10 xl:mb-16 max-w-xs sm:max-w-md md:max-w-xl xl:max-w-2xl mx-auto px-1 sm:px-0">
+        <p className="text-[20px] text-white mb-5 sm:mb-8 md:mb-10 xl:mb-16 max-w-xs sm:max-w-md md:max-w-xl xl:max-w-2xl mx-auto px-1 sm:px-0">
           Learn in-demand skills that drive success in health, social care, leadership and
           management and transform your career today.
         </p>
-        <a href="#" className="inline-block bg-white text-black font-bold py-4 px-10 xl:py-6 xl:px-12 xl:text-lg rounded-2xl shadow-lg hover:bg-gray-100 transition-colors">
+        <a href="#" className="inline-block bg-white text-black font-bold py-4 px-10 xl:py-6 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-gray-100 transition-colors">
           Get started
         </a>
       </div>
