@@ -106,7 +106,7 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
               key={index}
                 className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col w-full min-h-[480px] h-full"
             >
-                <Link href={`/courses/${course.slug}`}>
+                <Link href={`/coursesDescription/${course.slug}`}>
                   <div className="relative w-full h-[180px]">
                 <Image
                   src={course.courseImage}
@@ -122,13 +122,13 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
                   <Image
                     src={course.instructorImage}
                     alt={course.instructorName}
-                          width={22}
-                          height={22}
+                          width={28}
+                          height={28}
                           className="rounded-full mr-3 object-cover"
                   />
-                  <span className="text-gray-700 text-[12px] sm:text-base xl:text-[12px]">By {course.instructorName}</span>
+                  <span className="text-gray-700 text-[16px]">By {course.instructorName}</span>
                 </div>
-                      <h3 className="text-[16px] font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[48px] lg:min-h-[64px]">
+                      <h3 className="text-[32px] font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[48px] lg:min-h-[64px]">
                   {course.title}
                 </h3>
                       <div className="flex-grow"></div>

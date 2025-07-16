@@ -2,10 +2,10 @@
 import ContactHeroSection from "@/app/components/contact/ContactHeroSection";
 import ContactFormSection from "@/app/components/contact/ContactFormSection";
 import ContactMapSection from "@/app/components/contact/ContactMapSection";
-import CallToActionSection from "@/app/components/About/CallToActionSection";
 import Footer from "@/app/components/Footer";
 import Navbar from "../components/Navbar";
 import { useState } from "react";
+import CtaSection from "../components/home/CtaSection";
 
 export default function ContactPage() {
   const [cartItems, setCartItems] = useState<any[]>([]);
@@ -20,7 +20,7 @@ export default function ContactPage() {
       <ContactHeroSection />
       <ContactFormSection />
       <ContactMapSection />
-      <CallToActionSection />
+      <CtaSection/>
       <Footer />
     </main>
   );
