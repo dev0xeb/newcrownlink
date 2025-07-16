@@ -12,7 +12,7 @@ const AboutSection = () => {
         <p className="text-base sm:text-lg md:text-xl xl:text-xl text-gray-700 mb-12 xl:mb-16 leading-relaxed sm:leading-loose xl:leading-relaxed">
         Accredited courses with certification that provide Certified Status for <br /> individuals who hold them in their sector!
         </p>
-        <Link href="/courses" className="inline-block bg-[#1A6EDC] text-white font-semibold py-3 px-8 xl:py-4 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-[#1557B0] transition-colors">
+        <Link href="/course" className="inline-block bg-[#1A6EDC] text-white font-semibold py-3 px-8 xl:py-4 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-[#1557B0] transition-colors">
           View all courses
         </Link>
       </div>
