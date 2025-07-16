@@ -72,36 +72,12 @@ const Navbar = () => {
                 >
                   About
                 </Link>
-                <div className="relative">
-                  <button
-                    onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
-                    className={`flex items-center gap-1 ${styles.navLink} ${isActive('/courses') ? 'text-[#1A6EDC] font-semibold' : ''}`}
-                  >
-                    Courses
-                    <Image
-                      src={icons.dropdown}
-                      alt="dropdown"
-                      width={20}
-                      height={20}
-                      className={`object-contain transition-transform ${isCoursesDropdownOpen ? 'rotate-180' : ''}`}
-                    />
-                  </button>
-                  {isCoursesDropdownOpen && (
-                    <div className="absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                      <div className="py-1">
-                        {courses.map((course) => (
-                          <Link
-                            key={course}
-                            href={`/courses/${course.toLowerCase().replace(' ', '-')}`}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                          >
-                            {course}
-                          </Link>
-                        ))}
-                      </div>
-                    </div>
-                  )}
-                </div>
+                <Link
+                  href="/course"
+                  className={`${styles.navLink} ${isActive('/course') ? 'text-[#1A6EDC] font-semibold' : ''}`}
+                >
+                  Courses
+                </Link>
                 <Link 
                   href="/contact" 
                   className={`${styles.navLink} ${isActive('/contact') ? 'text-[#1A6EDC] font-semibold' : ''}`}

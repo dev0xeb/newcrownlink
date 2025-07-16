@@ -106,8 +106,8 @@ const extraCourseData = [
         image: '/medication-management.jpg',
         title: 'MEDICATION MANAGEMENT',
         instructor: 'ADE INAOLAJI',
-        price: '£500',
-        oldPrice: '£700'
+        price: '£2000',
+        oldPrice: '£2500'
       }
     ]
   },
@@ -130,8 +130,8 @@ const extraCourseData = [
       lessons: 8,
       enrolled: 60,
       access: 'LIFETIME',
-      price: '£500',
-      oldPrice: '£700'
+      price: '£2000',
+      oldPrice: '£2500'
     },
     otherCourses: [
       {
@@ -169,8 +169,8 @@ const extraCourseData = [
       lessons: 8,
       enrolled: 60,
       access: 'LIFETIME',
-      price: '£500',
-      oldPrice: '£700'
+      price: '£2000',
+      oldPrice: '£2500'
     },
     otherCourses: [
       {

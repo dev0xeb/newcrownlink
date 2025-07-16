@@ -25,7 +25,7 @@ const Hero = () => {
           Learn in-demand skills that drive success in health, social care, leadership and
           management and transform your career today.
         </p>
-        <a href="#" className="inline-block bg-white text-black font-bold py-4 px-10 xl:py-6 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-gray-100 transition-colors">
+        <a href="/signup" className="inline-block bg-white text-black font-bold py-4 px-10 xl:py-6 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-gray-100 transition-colors">
           Get started
         </a>
       </div>

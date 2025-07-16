@@ -5,12 +5,12 @@ import AboutImage from "../components/About/AboutImageSection";
 import AboutIntro from "../components/About/AboutIntroSection";
 import AboutStats from "../components/About/AboutStatsSection";
 import AboutMission from "../components/About/AcoutMissionSection";
-import AboutCTA from "../components/About/CallToActionSection";
 import TestimonialsSection from "../components/About/Testimonials";
 import WhyChooseUs from "../components/About/WhyChooseUsSection";
 import Footer from "../components/Footer";
 import ImageBanner from "../components/home/ImageBanner";
 import Navbar from "../components/Navbar";
+import CtaSection from "../components/home/CtaSection";
 
 export default function AboutPage() {
   const [cartItems, setCartItems] = useState<any[]>([]);
@@ -30,7 +30,7 @@ export default function AboutPage() {
       <AboutStats />
       <WhyChooseUs />
       <TestimonialsSection />
-      <AboutCTA />
+      <CtaSection />
       <Footer/>
     </main>
   );
