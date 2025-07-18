@@ -21,13 +21,25 @@ model User {
   name      String
   role      String   @default("user")
   createdAt DateTime @default(now())
+  orders    Order[]
 }
 
 model Course {
-  id          Int      @id @default(autoincrement())
+  id          Int       @id @default(autoincrement())
   title       String
   description String
   imageUrl    String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  orders      Order[]   @relation("OrderCourses")
+}
+
+model Order {
+  id         Int       @id @default(autoincrement())
+  user       User      @relation(fields: [userId], references: [id])
+  userId     Int
+  courses    Course[]  @relation("OrderCourses") // <-- No references here!
+  status     String    // 'pending', 'paid', 'access_granted'
+  createdAt  DateTime  @default(now())
+  updatedAt  DateTime  @updatedAt
 }
