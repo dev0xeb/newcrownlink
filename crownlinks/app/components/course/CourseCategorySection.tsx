@@ -21,7 +21,7 @@ interface CourseCategorySectionProps {
 const CourseCategorySection: React.FC<CourseCategorySectionProps> = ({ title, courses }) => (
   <div className="text-2xl font-bold mb-6 mx-[40px]">
     <section className="mb-10">
-      <h2 className="text-xl font-bold mb-4">{title}</h2>
+      <h2 className="text-xl font-bold mb-4 line-clamp-2">{title}</h2>
       <CourseList courses={courses} />
     </section>
   </div>

@@ -16,16 +16,16 @@ const Hero = () => {
       </div>
 
       <div className="relative z-5 text-center max-w-9xl mx-auto px-2 sm:px-8 md:px-12 lg:px-20 xl:px-32 w-full">
-        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[56px] font-bold mb-3 sm:mb-6 md:mb-8 xl:mb-12 leading-tight tracking-tight">
+        <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl lg:text-[40px] xl:text-[56px] font-bold mb-[24px] leading-tight tracking-tight">
           Empower Your Future 
           <br /> with  Crownlinks Academy and <br />
           Unlock Boundless  Opportunities
         </h1>
-        <p className="text-[20px] text-white mb-5 sm:mb-8 md:mb-10 xl:mb-16 max-w-xs sm:max-w-md md:max-w-xl xl:max-w-2xl mx-auto px-1 sm:px-0">
+        <p className="text-[20px] text-white mb-[40px] max-w-xs sm:max-w-md md:max-w-xl xl:max-w-2xl mx-auto px-1 sm:px-0">
           Learn in-demand skills that drive success in health, social care, leadership and
           management and transform your career today.
         </p>
-        <a href="/signup" className="inline-block bg-white text-black font-bold py-4 px-10 xl:py-6 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-gray-100 transition-colors">
+        <a href="/signup" className="inline-block bg-white text-black font-bold rounded-3xl shadow-lg hover:bg-gray-100 transition-colors" style={{ height: '60px', width: '143px', lineHeight: '60px', padding: 0 }}>
           Get started
         </a>
       </div>
