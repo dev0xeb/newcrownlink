@@ -22,7 +22,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
   originalPrice,
   children,
 }) => (
-  <div className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col w-full min-h-[240px] md:min-h-[320px] h-full">
+  <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 flex flex-col w-full min-h-[240px] md:min-h-[320px] h-full">
     <div className="relative w-full h-[100px] md:h-[140px] xl:h-[180px]">
       <Image src={image} alt={alt} layout="fill" objectFit="cover" className="rounded-t-2xl" />
     </div>
