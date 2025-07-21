@@ -12,7 +12,7 @@ interface CourseFiltersProps {
 }
 
 const CourseFilters: React.FC<CourseFiltersProps> = ({ value, onChange }) => (
-  <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
+  <div className="max-w-9xl mx-[40px]">
     <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 mt-8 mb-8 w-full">
       <div className="relative w-full md:w-auto">
         <select className="rounded-full border border-gray-200 bg-white px-5 py-2 pr-10 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-100 appearance-none w-full md:min-w-[140px]">

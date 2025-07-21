@@ -91,8 +91,8 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   };
 
   return (
-    <section className="bg-white text-black px-0 lg:px-24 py-8 xl:mt-16">
-      <div className="max-w-[1800px] mx-auto mx-[40px]">
+    <section className="bg-white text-black px-0  xl:mt-16">
+      <div className="max-w-[1800px] mx-[40px]">
         {successMsg && (
           <div className="mb-4 px-4 py-2 bg-green-100 text-green-800 rounded text-center font-semibold">
             {successMsg}

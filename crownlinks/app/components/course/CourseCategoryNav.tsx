@@ -46,30 +46,32 @@ const CourseCategoryNav: React.FC = () => {
   };
 
   return (
-    <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20">
+    <div className="max-w-9xl mx-[40px]">
       <nav className="relative flex items-center bg-white py-2">
-        {showLeft && (
-          <button onClick={() => scroll("left")} className="absolute left-0 z-10 h-full px-2 bg-gradient-to-r from-white/90 to-transparent">
-            <span className="text-xl">&#8592;</span>
-          </button>
-        )}
-        <span className="font-semibold mr-2 whitespace-nowrap">Course Categories</span>
-        <div
-          ref={scrollRef}
-          className="flex space-x-6 overflow-x-auto scrollbar-hide ml-2 pr-8"
-          style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch", msOverflowStyle: "none", scrollbarWidth: "none" }}
-        >
-          {categories.map((cat, idx) => (
-            <span key={idx} className="text-gray-500 whitespace-nowrap cursor-pointer hover:text-black transition-colors">
-              {cat}
-            </span>
-          ))}
+        <span className="font-semibold mr-4 whitespace-nowrap">Course Categories</span>
+        <div className="relative flex-1 flex items-center">
+          {showLeft && (
+            <button onClick={() => scroll("left")} className="absolute left-0 z-10 h-full px-2 bg-gradient-to-r from-white/90 to-transparent">
+              <span className="text-xl">&#8592;</span>
+            </button>
+          )}
+          <div
+            ref={scrollRef}
+            className="flex gap-[30px] overflow-x-auto scrollbar-hide ml-2 pr-8 w-full"
+            style={{ scrollBehavior: "smooth", WebkitOverflowScrolling: "touch", msOverflowStyle: "none", scrollbarWidth: "none" }}
+          >
+            {categories.map((cat, idx) => (
+              <span key={idx} className="text-gray-500 whitespace-nowrap cursor-pointer hover:text-black transition-colors">
+                {cat}
+              </span>
+            ))}
+          </div>
+          {showRight && (
+            <button onClick={() => scroll("right")} className="absolute right-0 z-10 h-full px-2 bg-gradient-to-l from-white/90 to-transparent">
+              <span className="text-xl">&#8594;</span>
+            </button>
+          )}
         </div>
-        {showRight && (
-          <button onClick={() => scroll("right")} className="absolute right-0 z-10 h-full px-2 bg-gradient-to-l from-white/90 to-transparent">
-            <span className="text-xl">&#8594;</span>
-          </button>
-        )}
       </nav>
     </div>
   );
