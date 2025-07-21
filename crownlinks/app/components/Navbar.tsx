@@ -43,8 +43,8 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="bg-white shadow-md">
-        <div className="max-w-9xl mx-auto px-6 sm:px-8 lg:px-20 py-4">
+      <nav className="bg-white shadow-md mx-[40px]">
+        <div className="max-w-9xl mx-auto py-4">
           <div className="flex justify-between items-center h-16">
             <div className="flex-shrink-0">
               <Link href="/" className="flex items-center">
@@ -172,34 +172,13 @@ const Navbar = () => {
                   >
                     About
                   </Link>
-                  <div className="relative">
-                    <button
-                      onClick={() => setIsCoursesDropdownOpen(!isCoursesDropdownOpen)}
-                      className={`w-full flex items-center justify-between px-3 py-2 rounded-md text-base font-medium ${isActive('/courses') ? 'text-[#1A6EDC] font-semibold' : 'text-gray-700'} hover:text-[#1A6EDC] hover:bg-gray-50`}
-                    >
-                      Courses
-                      <Image
-                        src={icons.dropdown}
-                        alt="dropdown"
-                        width={20}
-                        height={20}
-                        className={`object-contain transition-transform ${isCoursesDropdownOpen ? 'rotate-180' : ''}`}
-                      />
-                    </button>
-                    {isCoursesDropdownOpen && (
-                      <div className="pl-4 pb-2">
-                        {courses.map((course) => (
-                          <Link
-                            key={course}
-                            href={`/courses/${course.toLowerCase().replace(' ', '-')}`}
-                            className={styles.mobileNavLink}
-                          >
-                            {course}
-                          </Link>
-                        ))}
-                      </div>
-                    )}
-                  </div>
+                  <Link
+                    href="/course"
+                    className={`${styles.mobileNavLink} ${isActive('/course') ? 'text-[#1A6EDC] font-semibold' : ''}`}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    Courses
+                  </Link>
                   <Link 
                     href="/contact" 
                     className={`${styles.mobileNavLink} ${isActive('/contact') ? 'text-[#1A6EDC] font-semibold' : ''}`}
