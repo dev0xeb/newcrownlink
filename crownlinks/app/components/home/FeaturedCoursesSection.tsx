@@ -5,6 +5,7 @@ import Link from 'next/link';
 import images from '../../assets/image';
 import { useCart } from '../../components/checkout/CartContext';
 import { useState } from 'react';
+import CourseCard from '../course/CourseCard';
 
 type Course = {
   id: string;
@@ -90,8 +91,8 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   };
 
   return (
-    <section className="bg-white text-black px-[40px] lg:px-24 py-8 xl:mt-16">
-      <div className="max-w-[1800px] mx-auto">
+    <section className="bg-white text-black px-0 lg:px-24 py-8 xl:mt-16">
+      <div className="max-w-[1800px] mx-auto mx-[40px]">
         {successMsg && (
           <div className="mb-4 px-4 py-2 bg-green-100 text-green-800 rounded text-center font-semibold">
             {successMsg}
@@ -102,53 +103,25 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
           {courses.map((course, index) => {
             const inCart = false; // No cartItems prop, so always false for now
             return (
-              <div
-              key={index}
-                className="bg-white rounded-2xl shadow-md overflow-hidden border border-gray-200 flex flex-col w-full min-h-[480px] h-full"
-            >
-                <Link href={`/coursesDescription/${course.slug}`}>
-                  <div className="relative w-full h-[180px]">
-                <Image
-                  src={course.courseImage}
-                  alt={course.courseAlt}
-                  layout="fill"
-                  objectFit="cover"
-                      className="rounded-t-2xl"
-                />
-              </div>
-                  <div className="p-6 flex flex-col flex-1 justify-between">
-                    <div className="flex-1 flex flex-col">
-                      <div className="flex items-center mb-4">
-                  <Image
-                    src={course.instructorImage}
-                    alt={course.instructorName}
-                          width={28}
-                          height={28}
-                          className="rounded-full mr-3 object-cover"
-                  />
-                  <span className="text-gray-700 text-[16px]">By {course.instructorName}</span>
-                </div>
-                      <h3 className="text-[32px] font-bold text-[#242424] mb-4 leading-snug uppercase text-left min-h-[48px] lg:min-h-[64px]">
-                  {course.title}
-                </h3>
-                      <div className="flex-grow"></div>
-                    </div>
-                    <div>
-                      <div className="flex items-baseline mb-6 lg:mb-0 lg:mt-auto">
-                        <span className="text-gray-900 font-bold text-[18px] mr-2">{course.currentPrice}</span>
-                        <span className="text-gray-500 line-through text-[14px]">{course.originalPrice}</span>
-                      </div>
-                    </div>
-                </div>
-                </Link>
-                <div className="px-6 pb-6 mt-auto">
-                  <button
-                    className="w-full border-2 border-blue-500 text-blue-500 font-semibold py-2 rounded-full transition-colors hover:bg-blue-500 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed"
-                    onClick={() => handleAddToCart(course)}
+              <div key={index} className="flex flex-col h-full">
+                <Link href={`/coursesDescription/${course.slug}`} className="flex-1">
+                  <CourseCard
+                    image={course.courseImage}
+                    alt={course.courseAlt}
+                    instructorImage={course.instructorImage}
+                    instructorName={course.instructorName}
+                    title={course.title}
+                    currentPrice={course.currentPrice}
+                    originalPrice={course.originalPrice}
                   >
-                    Add to cart
-                  </button>
-                </div>
+                    <button
+                      className="w-full border-2 border-blue-500 text-blue-500 font-semibold py-2 rounded-full transition-colors hover:bg-blue-500 hover:text-white disabled:opacity-50 disabled:cursor-not-allowed mt-4"
+                      onClick={e => { e.preventDefault(); handleAddToCart(course); }}
+                    >
+                      Add to cart
+                    </button>
+                  </CourseCard>
+                </Link>
               </div>
             );
           })}
