@@ -9,8 +9,8 @@ const Education = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl xl:text-5xl font-bold text-[#242424] mb-5">
         Redefining Quality Online Education
         </h2>
-        <p className="text-base sm:text-lg md:text-xl xl:text-xl text-gray-700 mb-5 leading-relaxed sm:leading-loose xl:leading-relaxed">
-        Crownlinks Academy offers accessible, high-quality online courses in Technology, Business, Healthcare, <br /> Education, and Digital Skills. We empower learners with practical skills to thrive in today's job market and support <br /> their career and personal growth.
+        <p className="text-[20px] text-gray-700 mb-5 leading-relaxed sm:leading-loose xl:leading-relaxed">
+        Crownlinks Academy offers accessible, high-quality online courses in Technology, Business, Healthcare, Education, and Digital Skills. We empower learners with practical skills to thrive in today's job market and support  their career and personal growth.
         </p>
         <Link href="/about" className="inline-block bg-[#1A6EDC] text-white font-semibold py-3 px-8 xl:py-4 xl:px-12 xl:text-lg rounded-3xl shadow-lg hover:bg-[#1557B0] transition-colors">
           Read about us

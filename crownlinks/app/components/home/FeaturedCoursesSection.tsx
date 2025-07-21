@@ -73,7 +73,7 @@ const defaultCourses = [
   },
 ];
 
-const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other courses that might interest you" }: FeaturedCoursesSectionProps) => {
+const FeaturedCoursesSection = ({ courses = defaultCourses, title = "" }: FeaturedCoursesSectionProps) => {
   const { addToCart } = useCart();
   const [successMsg, setSuccessMsg] = useState<string | null>(null);
 
@@ -91,7 +91,7 @@ const FeaturedCoursesSection = ({ courses = defaultCourses, title = "Other cours
   };
 
   return (
-    <section className="bg-white text-black px-0  xl:mt-16">
+    <section className="bg-white text-black px-0">
       <div className="max-w-[1800px] mx-[40px]">
         {successMsg && (
           <div className="mb-4 px-4 py-2 bg-green-100 text-green-800 rounded text-center font-semibold">

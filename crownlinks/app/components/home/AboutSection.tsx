@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const AboutSection = () => {
   return (
-    <section className="bg-white py-16 sm:py-24 lg:py-32 xl:py-40 text-center px-4 sm:px-6 md:px-12 lg:px-8">
+    <section className="bg-white mt-[100px] mb-[100px] py-[56px] text-center px-4 sm:px-6 md:px-12 lg:px-8">
       <div className="max-w-9xl mx-auto px-6 sm:px-8 md:px-12 lg:px-20 xl:px-32">
         <h2 className="text-[40px] sm:text-[40px] md:text-[40px] xl:text-[40px] font-bold text-[#242424] mb-5 ">
           Industry Recongnized Favourites
