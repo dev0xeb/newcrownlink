@@ -32,7 +32,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
           <Image src={instructorImage} alt={instructorName} width={22} height={22} className="rounded-full mr-2 object-cover" />
           <span className="text-gray-700 text-[12px] md:text-sm">By {instructorName}</span>
         </div>
-        <h3 className="text-[14px] md:text-[16px] font-bold text-[#242424] mb-2 leading-snug uppercase text-left min-h-[28px] md:min-h-[32px] line-clamp-2">{title}</h3>
+        <h3 className="text-[14px] md:text-[16px] font-bold text-[#242424] mb-2 leading-snug uppercase text-left min-h-[28px] md:min-h-[32px] line-clamp-2 hover:underline cursor-pointer transition-all">{title}</h3>
       </div>
       <div className="mt-4">
         <div className="flex items-baseline mb-4">
@@ -45,4 +45,4 @@ const CourseCard: React.FC<CourseCardProps> = ({
   </div>
 );
 
-export default CourseCard; 
+export default CourseCard;

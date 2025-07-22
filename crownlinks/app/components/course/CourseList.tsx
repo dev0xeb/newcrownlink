@@ -18,7 +18,7 @@ interface CourseListProps {
 }
 
 const CourseList: React.FC<CourseListProps> = ({ courses }) => (
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-6">
     {courses.map((course) => (
       <CourseCard key={course.id} {...course} />
     ))}
