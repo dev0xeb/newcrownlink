@@ -8,6 +8,11 @@ import family_learning_course from './images/family-learning-course.png'
 import instructor_ade_profile from './images/instructor-ade-profile.jpg'
 import testimonials_profile from './images/Testimonials.jpg'
 import Hero from './images/Hero.png'
+import QualityCourses from './images/QualityCourses.jpg'
+import instructor from './images/Instructors.png'
+import paths from './images/learningPaths.jpeg'
+import experience from './images/learningExperience.jpg'
+
 const images ={
     logo,
     hero_img,
@@ -19,6 +24,10 @@ const images ={
     instructor_ade_profile,
     testimonials_profile,
     Hero,
+    QualityCourses,
+    instructor,
+    paths,
+    experience
 }
 
 export default images;

@@ -1,6 +1,6 @@
 'use client'
 import Navbar from '@/app/components/Navbar';
-import WhyChooseUs from './components/home/WhyChooseUs';
+import WhyChooseUs from './components/About/WhyChooseUsSection';
 import Hero from './components/home/Hero';
 import AboutSection from './components/home/AboutSection';
 import ImageBanner from './components/home/ImageBanner';
