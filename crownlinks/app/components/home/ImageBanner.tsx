@@ -11,12 +11,10 @@ const ImageBanner = () => {
         alt="Students in a classroom with an instructor"
         width={1920}
         height={600}
-        layout="responsive"
-        objectFit="cover"
-        className="w-full md:h-[400px] lg:h-[600px] xl:h-[800px]"
+        className="w-full h-auto md:h-[400px] lg:h-[600px] xl:h-[800px] object-cover"
       />
     </section>
   );
 };
 
-export default ImageBanner; 
+export default ImageBanner;

@@ -50,7 +50,7 @@ const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
       {/* Left: Course Image */}
       <div className="w-full md:basis-1/2 flex justify-center md:justify-start mb-8 md:mb-0">
         <div className="w-full h-0 pb-[100%] md:pb-[80%] xl:pb-[60%] relative rounded-2xl overflow-hidden shadow-lg">
-          <Image src={image} alt={title} layout="fill" objectFit="cover" className="rounded-2xl" />
+          <Image src={image} alt={title} fill className="object-cover rounded-2xl" />
         </div>
       </div>
       {/* Right: Info */}
@@ -84,4 +84,4 @@ const CourseHeroSection: React.FC<CourseHeroSectionProps> = ({
   );
 };
 
-export default CourseHeroSection; 
+export default CourseHeroSection;

@@ -7,11 +7,9 @@ const AboutImage = () => (
       <Image
         src={images.home_banner} 
         alt="Students in a classroom with an instructor"
-        width={1200} 
-        height={600} 
-        layout="responsive"
-        objectFit="cover"
-        className="rounded-lg shadow-lg"
+        width={1200}
+        height={600}
+        className="rounded-lg shadow-lg object-cover w-full h-auto"
       />
       <p className="mt-6 xl:mt-8 text-[40px] text-center">
         {/* Add your about image section text here */}
