@@ -24,7 +24,7 @@ const CourseCard: React.FC<CourseCardProps> = ({
 }) => (
   <div className="bg-white rounded-2xl overflow-hidden border border-gray-200 flex flex-col w-full min-h-[240px] md:min-h-[320px] h-full">
     <div className="relative w-full h-[100px] md:h-[140px] xl:h-[180px]">
-      <Image src={image} alt={alt} layout="fill" objectFit="cover" className="rounded-t-2xl" />
+      <Image src={image} alt={alt} fill className="object-cover rounded-t-2xl" />
     </div>
     <div className="p-3 md:p-4 flex flex-col flex-1 justify-between h-full">
       <div className="flex-1 flex flex-col">

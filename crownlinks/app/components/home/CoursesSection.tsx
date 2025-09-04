@@ -27,8 +27,8 @@ const CoursesSection = () => {
                 <Image
                   src={course.image}
                   alt={course.alt}
-                  layout="fill"
-                  objectFit="cover"
+                  fill
+                  className="object-cover"
                 />
               </div>
               <div className="p-6 xl:p-8 text-left flex flex-col flex-grow">
@@ -53,4 +53,4 @@ const CoursesSection = () => {
   );
 };
 
-export default CoursesSection; 
+export default CoursesSection;
